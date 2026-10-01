@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー / Privacy Policy — Clipper</title>
+<style>
+  :root { --ink: #1b1f3b; --muted: #5e6178; --line: #e3e5ee; --bg: #ffffff; --accent: #2ea8e6 }
+  @media (prefers-color-scheme: dark) { :root { --ink: #eceef6; --muted: #a9abc0; --line: #2c3157; --bg: #12152b } }
+  * { box-sizing: border-box }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.8 "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif; padding: 40px 16px 80px }
+  main { max-width: 760px; margin: 0 auto }
+  h1 { font-size: 28px; line-height: 1.3; margin: 0 0 4px }
+  h2 { font-size: 20px; margin: 40px 0 8px; padding-top: 16px; border-top: 1px solid var(--line) }
+  h3 { font-size: 16px; margin: 24px 0 4px }
+  p, li { margin: 6px 0 }
+  .meta { color: var(--muted); font-size: 14px }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 8px 0 }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--line) }
+  th { color: var(--muted); font-weight: 600 }
+  code { font-size: 13px; background: color-mix(in srgb, var(--ink) 8%, transparent); padding: 1px 5px; border-radius: 4px }
+  a { color: var(--accent) }
+  .lang { margin-top: 64px; padding-top: 24px; border-top: 3px solid var(--line) }
+</style>
+</head>
+<body>
+<main>
+
+<h1>プライバシーポリシー</h1>
+<p class="meta">Clipper / 運営者: 稲垣達大 / 制定日: 2026 年 10 月 2 日</p>
+
+<h2>1. このアプリについて</h2>
+<p>Clipper (以下「本アプリ」) は、稲垣達大が自分で運営する YouTube の切り抜きチャンネルに動画を投稿するための、社内用のデスクトップアプリです。本アプリが操作するのは運営者自身のチャンネルだけで、第三者のユーザーがログインしたり、第三者のチャンネルを操作したりすることはありません。</p>
+
+<h2>2. YouTube API サービスの利用</h2>
+<p>本アプリは YouTube API サービス (YouTube Data API v3) を使い、次のことを行います。</p>
+<ul>
+  <li>運営者のチャンネルへの動画のアップロード (予約公開の設定を含む)</li>
+  <li>運営者のチャンネルの再生リストの確認・作成と、再生リストへの動画の追加</li>
+  <li>ログインしたチャンネルの確認 (チャンネル名の取得)</li>
+</ul>
+<p>本アプリを使うことで、利用者は <a href="https://www.youtube.com/t/terms">YouTube 利用規約</a> に同意したものとみなします。YouTube API サービスを通じて扱われるデータには <a href="https://policies.google.com/privacy">Google プライバシーポリシー</a> が適用されます。</p>
+
+<h3>使用する権限 (OAuth スコープ)</h3>
+<table>
+  <tr><th>スコープ</th><th>使う目的</th></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube.upload</code></td><td>動画のアップロード</td></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube.readonly</code></td><td>ログインしたチャンネル名と、既存の再生リストの確認</td></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube</code></td><td>再生リストの作成と、再生リストへの動画の追加</td></tr>
+</table>
+
+<h2>3. 取得・保存するデータ</h2>
+<p>本アプリが保存するデータは、すべて運営者のパソコンの中だけにあり、本アプリの運営者のサーバーや第三者には送りません。</p>
+<table>
+  <tr><th>データ</th><th>保存場所と方法</th><th>保存する期間</th></tr>
+  <tr><td>Google のアクセス許可 (OAuth のリフレッシュトークン)</td><td>運営者のパソコンに、OS のキーチェーンで暗号化して保存</td><td>連携を解除するまで</td></tr>
+  <tr><td>本アプリが作成・使用した再生リストの ID</td><td>運営者のパソコン</td><td>連携を解除するまで (解除時に削除)</td></tr>
+  <tr><td>アップロードした動画の ID・URL・タイトル・予約公開の時刻・公開設定</td><td>運営者のパソコン (投稿の記録として)</td><td>運営者がアプリで記録を削除するまで</td></tr>
+  <tr><td>その日の API の使用量 (回数)</td><td>運営者のパソコン</td><td>日付が変わると上書き</td></tr>
+</table>
+<p>ログインしたチャンネルの名前は、ログインできたことの確認に表示するだけで保存しません。本アプリは、視聴者や他のチャンネルの個人情報を取得しません。Cookie やアクセス解析は使いません。</p>
+<p>アップロードが終わったことと動画の URL を、運営者自身が管理する Discord サーバーに通知することがあります。これ以外にデータを外部へ送ることはありません。</p>
+
+<h2>4. 連携の解除とデータの削除</h2>
+<ul>
+  <li>本アプリの設定画面の「連携を解除」で、Google 側のアクセス許可を取り消し、保存したリフレッシュトークンと再生リストの ID をすぐに削除します。</li>
+  <li>本アプリを使わずに、<a href="https://security.google.com/settings/security/permissions">Google アカウントのアクセス設定</a> から本アプリの許可を取り消すこともできます。</li>
+  <li>投稿の記録は、本アプリの投稿画面からいつでも削除できます。</li>
+  <li>データの削除を依頼された場合は、遅くとも 30 日以内に削除します。</li>
+</ul>
+
+<h2>5. お問い合わせ</h2>
+<p>このポリシーについてのお問い合わせ: <a href="mailto:info@inatatsu.dev">info@inatatsu.dev</a></p>
+
+<h2>6. 改定</h2>
+<p>本ポリシーを変更するときは、このページを更新し、制定日・改定日を記載します。</p>
+
+
+<section class="lang" lang="en">
+<h1>Privacy Policy</h1>
+<p class="meta">Clipper / Operator: Tatsuhiro Inagaki (稲垣達大) / Effective date: October 2, 2026</p>
+
+<h2>1. About this app</h2>
+<p>Clipper ("the App") is an internal desktop tool that Tatsuhiro Inagaki uses to publish videos to the YouTube clip channels it operates itself. The App only accesses the operator's own channels. No third-party users sign in to the App, and the App does not access any third-party channel.</p>
+
+<h2>2. Use of YouTube API Services</h2>
+<p>The App uses YouTube API Services (YouTube Data API v3) to:</p>
+<ul>
+  <li>upload videos to the operator's channels, including scheduled publishing;</li>
+  <li>list and create playlists on the operator's channels and add videos to them;</li>
+  <li>confirm which channel was signed in (channel title).</li>
+</ul>
+<p>By using the App, users agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Data handled through YouTube API Services is subject to the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h3>OAuth scopes</h3>
+<table>
+  <tr><th>Scope</th><th>Purpose</th></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube.upload</code></td><td>Uploading videos</td></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube.readonly</code></td><td>Reading the signed-in channel title and existing playlists</td></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube</code></td><td>Creating playlists and adding videos to them</td></tr>
+</table>
+
+<h2>3. Data collected and stored</h2>
+<p>All data is stored only on the operator's own computer. It is never sent to a server run by the operator or to any third party.</p>
+<table>
+  <tr><th>Data</th><th>Where and how</th><th>Retention</th></tr>
+  <tr><td>Google authorization (OAuth refresh token)</td><td>Operator's computer, encrypted with the OS keychain</td><td>Until access is revoked</td></tr>
+  <tr><td>IDs of playlists the App created or used</td><td>Operator's computer</td><td>Until access is revoked (deleted on revocation)</td></tr>
+  <tr><td>ID, URL, title, scheduled publish time and privacy setting of uploaded videos</td><td>Operator's computer, as a posting log</td><td>Until the operator deletes the record in the App</td></tr>
+  <tr><td>Daily API usage count</td><td>Operator's computer</td><td>Overwritten every day</td></tr>
+</table>
+<p>The signed-in channel title is only displayed to confirm the sign-in and is not stored. The App does not collect personal information about viewers or other channels, and uses no cookies or analytics.</p>
+<p>The App may notify the operator's own Discord server that an upload finished, including the video URL. No other data leaves the operator's computer.</p>
+
+<h2>4. Revoking access and deleting data</h2>
+<ul>
+  <li>"連携を解除" (Disconnect) in the App's settings revokes the Google authorization and immediately deletes the stored refresh token and playlist IDs.</li>
+  <li>Access can also be revoked at any time from the <a href="https://security.google.com/settings/security/permissions">Google security settings page</a>.</li>
+  <li>Posting records can be deleted at any time from the App's posting screen.</li>
+  <li>Deletion requests are completed within 30 days at the latest.</li>
+</ul>
+
+<h2>5. Contact</h2>
+<p>Questions about this policy: <a href="mailto:info@inatatsu.dev">info@inatatsu.dev</a></p>
+
+<h2>6. Changes</h2>
+<p>If this policy changes, this page will be updated with the new effective date.</p>
+</section>
+
+</main>
+</body>
+</html>
